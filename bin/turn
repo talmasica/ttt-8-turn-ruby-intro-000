@@ -1,1 +1,24 @@
 #!/usr/bin/env ruby
+require_relative '../lib/turn.rb'
+
+# Code your CLI Here
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+puts "Welcome to Tic Tac Toe!"
+puts display_board(board)
+turn(board)
+
+user_input = gets.strip
+
+index = input_to_index(user_input)
+
+if index == valid_move?
+  return move(board, index, current_player)
+else display_board
+  until index == valid_move?
+    puts "Your current move is invalid"
+  end
+
+
+
+
+display_board(board)
