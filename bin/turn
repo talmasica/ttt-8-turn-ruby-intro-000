@@ -13,10 +13,12 @@ index = input_to_index(user_input)
 
 if index == valid_move?
   return move(board, index, current_player)
-else display_board
+else display_board(board)
   until index == valid_move?
     puts "Your current move is invalid"
   end
+end
+
 
 
 
